@@ -453,3 +453,12 @@ margin:0;
 .notice-bar marquee{
 width:100%;
 }
+.notice-bar{
+width:100%;
+max-width:none;
+margin:0;
+padding:12px;
+background:#ffc107 !important;
+border-radius:0;
+box-shadow:none;
+}
