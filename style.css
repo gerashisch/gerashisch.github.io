@@ -462,3 +462,29 @@ background:#ffc107 !important;
 border-radius:0;
 box-shadow:none;
 }
+.contact-info{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+
+.contact-card{
+background:white;
+width:250px;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+
+.contact-card h3{
+color:#0d6efd;
+}
+
+
+.contact-card p{
+color:#555;
+}
