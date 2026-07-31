@@ -11,11 +11,11 @@ sections.forEach(function(section){
 
 let text = section.innerText.toLowerCase();
 
-if(text.includes(value)){
-section.style.display = "block";
+if(value === "" || text.includes(value)){
+section.style.opacity = "1";
 }
 else{
-section.style.display = "none";
+section.style.opacity = "0.3";
 }
 
 });
