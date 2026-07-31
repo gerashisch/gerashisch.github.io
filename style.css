@@ -439,3 +439,17 @@ margin:0;
 .notice-bar marquee{
 width:100%;
 }
+.notice-bar{
+background:#ffc107 !important;
+padding:12px;
+font-size:18px;
+font-weight:bold;
+color:#000;
+border-top:3px solid #0d6efd;
+border-bottom:3px solid #0d6efd;
+margin:0;
+}
+
+.notice-bar marquee{
+width:100%;
+}
