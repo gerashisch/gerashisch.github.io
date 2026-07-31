@@ -177,3 +177,34 @@ transition:.3s;
 .download-card a:hover{
 background:#084298;
 }
+.staff-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:25px;
+}
+
+.staff-card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+text-align:center;
+transition:.3s;
+border-top:5px solid #0d6efd;
+}
+
+.staff-card:hover{
+transform:translateY(-8px);
+}
+
+.staff-card h3{
+color:#0d6efd;
+margin-bottom:10px;
+font-size:22px;
+}
+
+.staff-card p{
+font-size:18px;
+color:#555;
+}
