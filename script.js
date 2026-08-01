@@ -32,7 +32,7 @@ if (searchInput) {
 
         let searchText = this.value.trim().toLowerCase();
 
-        let sections = document.querySelectorAll("section");
+        let sections = document.querySelectorAll("section:not(.search-box)");
 
         sections.forEach(function(section){
 
