@@ -15,3 +15,32 @@ function topFunction() {
         behavior: "smooth"
     });
 }
+
+// جستجوی داخلی سایت
+
+const searchInput = document.getElementById("searchInput");
+
+if(searchInput){
+
+searchInput.addEventListener("keyup", function(){
+
+    let value = searchInput.value.toLowerCase();
+
+    let sections = document.querySelectorAll("section");
+
+    sections.forEach(function(section){
+
+        let text = section.innerText.toLowerCase();
+
+        if(text.includes(value) || value === ""){
+            section.style.display = "block";
+        }
+        else{
+            section.style.display = "none";
+        }
+
+    });
+
+});
+
+}
