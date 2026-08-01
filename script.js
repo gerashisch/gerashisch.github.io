@@ -31,7 +31,11 @@ if(searchInput){
 
 searchInput.addEventListener("input", function(){
 
-let text = this.value.toLowerCase();
+let text = this.value
+.toLowerCase()
+.replace("‌"," ")
+.replace("-"," ")
+.trim();
 
 let sections = document.querySelectorAll("section");
 
@@ -41,7 +45,10 @@ sections.forEach(function(section){
         return;
     }
 
-    let content = section.innerText.toLowerCase();
+    let content = section.innerText
+.toLowerCase()
+.replace("‌"," ")
+.replace("-"," ");
 
     if(text === ""){
         section.style.display = "block";
