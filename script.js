@@ -31,8 +31,7 @@ searchInput.addEventListener("input", function(){
 
 let text = this.value.toLowerCase().trim();
 
-let sections = document.querySelectorAll("section");
-
+let sections = document.querySelectorAll("section:not(.search-box)");
 sections.forEach(function(section){
 
 if(text===""){
