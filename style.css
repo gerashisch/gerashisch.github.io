@@ -311,8 +311,12 @@ border-radius:15px;
 box-shadow:0 5px 15px rgba(0,0,0,.1);
 transition:.3s;
 border-right:6px solid #0d6efd;
-}
 
+width:100%;
+max-width:100%;
+box-sizing:border-box;
+overflow:hidden;
+}
 .news-card:hover{
 transform:translateY(-8px);
 }
