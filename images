@@ -1,2 +1,3 @@
-images/shad.png
-images/eitaa.png
+images
+ ├── shad.png
+ └── eitaa.png
