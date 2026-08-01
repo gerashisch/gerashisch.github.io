@@ -21,3 +21,35 @@ function topFunction() {
     });
 
 }
+
+// جستجوی داخلی سایت
+
+const searchInput = document.getElementById("searchInput");
+
+if (searchInput) {
+
+    searchInput.addEventListener("input", function () {
+
+        let searchText = this.value.trim().toLowerCase();
+
+        let sections = document.querySelectorAll("section");
+
+        sections.forEach(function(section){
+
+            let content = section.innerText.toLowerCase();
+
+            if (searchText === "") {
+                section.style.opacity = "1";
+            }
+            else if (content.includes(searchText)) {
+                section.style.opacity = "1";
+            }
+            else {
+                section.style.opacity = "0.3";
+            }
+
+        });
+
+    });
+
+}
