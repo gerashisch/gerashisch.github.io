@@ -19,104 +19,36 @@ function topFunction() {
         top: 0,
         behavior: "smooth"
     });
+    
 
 }
 
-// جستجوی داخلی سایت
-window.onload = function(){
-
-const searchInput = document.getElementById("searchInput");
-
-if(searchInput){
-
-searchInput.addEventListener("input", function(){
-
-let text = this.value
-.toLowerCase()
-.replace("‌"," ")
-.replace("-"," ")
-.trim();
-
-let sections = document.querySelectorAll("section");
-
-sections.forEach(function(section){
-
-    if(section.classList.contains("search-box")){
-        return;
-    }
-
-    let content = section.innerText
-.toLowerCase()
-.replace("‌"," ")
-.replace("-"," ");
-
-    if(text === ""){
-        section.style.display = "block";
-    }
-    else if(content.includes(text)){
-        section.style.display = "block";
-    }
-    else{
-        section.style.display = "none";
-    }
-
-});
-
-});
-
-}
-
-};
 const searchInput = document.getElementById("searchInput");
 
 if (searchInput) {
 
-    searchInput.addEventListener("input", function () {
+searchInput.addEventListener("input", function(){
 
-        let searchText = this.value.trim().toLowerCase();
-
-        let sections = document.querySelectorAll("section:not(.search-box)");
-
-        sections.forEach(function(section){
-
-            let content = section.innerText.toLowerCase();
-
-            if (searchText === "") {
-                section.style.opacity = "1";
-            }
-            else if (content.includes(searchText)) {
-                section.style.opacity = "1";
-            }
-            else {
-                section.style.opacity = "0.3";
-            }
-
-        });
-
-    });
-
-}
-window.onload = function(){
-
-const searchInput = document.getElementById("searchInput");
-
-if(searchInput){
-
-searchInput.addEventListener("keyup", function(){
-
-let text = searchInput.value.toLowerCase();
+let text = this.value.toLowerCase().trim();
 
 let sections = document.querySelectorAll("section");
 
 sections.forEach(function(section){
 
-let content = section.textContent.toLowerCase();
+if(text===""){
+section.style.background="";
+section.style.border="";
+return;
+}
+
+let content = section.innerText.toLowerCase();
 
 if(content.includes(text)){
-section.style.display = "block";
-}
-else{
-section.style.display = "none";
+section.style.background="#fff8d6";
+section.style.border="3px solid #ffc107";
+}else{
+section.style.background="";
+section.style.border="";
 }
 
 });
@@ -124,5 +56,3 @@ section.style.display = "none";
 });
 
 }
-
-};
