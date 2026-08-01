@@ -32,13 +32,8 @@ searchInput.addEventListener("input", function(){
 let text = this.value.toLowerCase().trim();
 
 let sections = document.querySelectorAll("section:not(.search-box)");
-sections.forEach(function(section){
 
-if(text===""){
-section.style.background="";
-section.style.border="";
-return;
-}
+sections.forEach(function(section){
 
 let content = section.innerText.toLowerCase();
 
@@ -47,17 +42,44 @@ if(content.includes(text) && text !== ""){
 section.style.background="#fff8d6";
 section.style.border="3px solid #ffc107";
 
-section.scrollIntoView({
-    behavior:"smooth",
-    block:"start"
-});
-
 }else{
+
 section.style.background="";
 section.style.border="";
+
 }
 
 });
+
+});
+
+
+// رفتن به نتیجه با Enter
+
+searchInput.addEventListener("keydown", function(e){
+
+if(e.key === "Enter"){
+
+let text = this.value.toLowerCase().trim();
+
+let sections = document.querySelectorAll("section:not(.search-box)");
+
+for(let section of sections){
+
+if(section.innerText.toLowerCase().includes(text)){
+
+section.scrollIntoView({
+behavior:"smooth",
+block:"start"
+});
+
+break;
+
+}
+
+}
+
+}
 
 });
 
