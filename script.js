@@ -54,33 +54,3 @@ section.style.border="";
 });
 
 
-// رفتن به نتیجه با Enter
-
-searchInput.addEventListener("keydown", function(e){
-
-if(e.key === "Enter"){
-
-let text = this.value.toLowerCase().trim();
-
-let sections = document.querySelectorAll("section:not(.search-box)");
-
-for(let section of sections){
-
-if(section.innerText.toLowerCase().includes(text)){
-
-section.scrollIntoView({
-behavior:"smooth",
-block:"start"
-});
-
-break;
-
-}
-
-}
-
-}
-
-});
-
-}
