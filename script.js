@@ -53,3 +53,33 @@ if (searchInput) {
     });
 
 }
+window.onload = function(){
+
+const searchInput = document.getElementById("searchInput");
+
+if(searchInput){
+
+searchInput.addEventListener("keyup", function(){
+
+let text = searchInput.value.toLowerCase();
+
+let sections = document.querySelectorAll("section");
+
+sections.forEach(function(section){
+
+let content = section.textContent.toLowerCase();
+
+if(content.includes(text)){
+section.style.display = "block";
+}
+else{
+section.style.display = "none";
+}
+
+});
+
+});
+
+}
+
+};
