@@ -1,5 +1,4 @@
 console.log("Hello");
-console.log("Search script loaded");
 let topButton = document.getElementById("topBtn");
 
 window.onscroll = function () {
