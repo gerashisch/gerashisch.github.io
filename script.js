@@ -42,9 +42,16 @@ return;
 
 let content = section.innerText.toLowerCase();
 
-if(content.includes(text)){
+if(content.includes(text) && text !== ""){
+
 section.style.background="#fff8d6";
 section.style.border="3px solid #ffc107";
+
+section.scrollIntoView({
+    behavior:"smooth",
+    block:"start"
+});
+
 }else{
 section.style.background="";
 section.style.border="";
