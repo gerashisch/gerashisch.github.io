@@ -23,7 +23,43 @@ function topFunction() {
 }
 
 // جستجوی داخلی سایت
+window.onload = function(){
 
+const searchInput = document.getElementById("searchInput");
+
+if(searchInput){
+
+searchInput.addEventListener("input", function(){
+
+let text = this.value.toLowerCase();
+
+let sections = document.querySelectorAll("section");
+
+sections.forEach(function(section){
+
+    if(section.classList.contains("search-box")){
+        return;
+    }
+
+    let content = section.innerText.toLowerCase();
+
+    if(text === ""){
+        section.style.display = "block";
+    }
+    else if(content.includes(text)){
+        section.style.display = "block";
+    }
+    else{
+        section.style.display = "none";
+    }
+
+});
+
+});
+
+}
+
+};
 const searchInput = document.getElementById("searchInput");
 
 if (searchInput) {
