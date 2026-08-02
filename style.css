@@ -648,42 +648,15 @@ border-radius:10px;
 outline:none;
 }
 
-.contact-btn{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:8px;
-}
-.contact-btn{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:8px;
-}
 
-.contact-btn .icon{
-width:30px;
-height:30px;
-object-fit:contain;
-display:block;
-}
+
+
 
 .contact-btn span{
 font-weight:bold;
 color:#fff;
 }
-.contact-btn{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-}
 
-.contact-btn .icon{
-    width:28px;
-    height:28px;
-    object-fit:contain;
-}
 
 .contact-btn span{
     font-weight:bold;
