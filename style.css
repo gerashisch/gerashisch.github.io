@@ -677,10 +677,12 @@ color:#fff;
 .contact-buttons{
 display:flex;
 justify-content:center;
+align-items:center;
 gap:15px;
 background:#f8f9fa;
-padding:15px;
+padding:20px;
 border-radius:15px;
+flex-wrap:wrap;
 }
 
 .contact-btn{
