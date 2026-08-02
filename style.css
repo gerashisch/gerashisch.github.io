@@ -682,3 +682,19 @@ margin-left:8px;
     vertical-align:middle;
     margin-left:8px;
 }
+.contact-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+}
+
+.contact-btn .icon{
+    width:28px;
+    height:28px;
+    object-fit:contain;
+}
+
+.contact-btn span{
+    font-weight:bold;
+}
